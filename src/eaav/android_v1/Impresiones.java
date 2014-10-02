@@ -70,7 +70,8 @@ public class Impresiones {
 	        InfToPrinter = WrTitulo(InfToPrinter, "PROCESO DE FACTURACION", 0, 1.2);
 	        InfToPrinter = WrTitulo(InfToPrinter, "NOVEDAD DE VISITA TECNICA DE CRITICA", 0, 2);
 	        InfToPrinter = WrLabel(InfToPrinter, "Acta No:", "N" + CamposImpresion.get(0).toString() + "-" + CamposGeneral + "-" + CamposImpresion.get(7).toString(), 3, 0, 1);
-	        InfToPrinter = WrLabel(InfToPrinter, "Factura Investigacion: ", factura, 3, 0, 1);
+	        //String.format("%.7f", var)
+	        InfToPrinter = WrLabel(InfToPrinter, "Factura Investigacion: ", String.format("%.0f", factura), 3, 0, 1);
 	        InfToPrinter = WrLabel(InfToPrinter, "Periodo Investigacion:", periodo_ini, 3, 0, 0);
 	        InfToPrinter = WrLabel(InfToPrinter, " a ", periodo_fin, 365, 0, 1.5);
 	        
