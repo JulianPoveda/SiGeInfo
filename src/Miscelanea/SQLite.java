@@ -178,11 +178,11 @@ public class SQLite {
 			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('pda','1000',0) ");
 			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('servidor','190.93.133.127',0) ");
 			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('puerto','8080',0) ");
-			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('servicio','EAAV-Desviaciones/ServerPDA/ServerToPDA.php',0) ");
+			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('servicio','EAAV-Desviaciones/ServerPDA',0) ");
 			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('nombre_tecnico','sin_asignar',1)");
 			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('cedula_tecnico','00000000',1)");
 			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('impresora','MZ320',1)");
-			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('web_service','WS_EAAV_Desviaciones.php',0)");
+			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('web_service','WS_EAAV_Desviaciones.php?wsdl',0)");
 			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('version','2.5',0)");
 		}
 
