@@ -54,7 +54,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
-                            android:layout_toRightOf="@+id/LblDesviacionRevision"
+                            android:layout_toRightOf="@+id/LblDesviacionPromedio"
                             android:inputType="text" />
 
                         <EditText
@@ -85,9 +85,11 @@
                             android:layout_alignBottom="@+id/TxtDesviacionRevision"
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentTop="true"
+                            android:layout_toLeftOf="@+id/TxtDesviacionRevision"
                             android:gravity="center_vertical"
                             android:text="@string/LblDesviacionRevision"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="18sp" />
 
                         <TextView
                             android:id="@+id/LblDesviacionNombre"
