@@ -32,31 +32,23 @@ public class ConnectServer {
 	
 	private Context ConnectServerContext;
 	private String 	DirectorioConexionServer;
-	
-	/**Carga de parametros desde la base de datos**/
-	private String _servidor;
-	private String _puerto;
-	private String _modulo;
-	private String _web_service;	
+	private String  _servidor;
+	private String  _puerto;
+	private String 	_web_service;
+	private String 	_servicio;
 	
 	//nusoap
-	private String URL;			// = "http://190.93.133.127:8080/EAAV-Desviaciones/ServerPDA/WS_EAAV_Desviaciones.php?wsdl";
-	private String NAMESPACE;	// = "http://190.93.133.127:8080/EAAV-Desviaciones/ServerPDA";
+	private static String URL		= "http://190.93.133.127:8080/EAAV-Desviaciones/ServerPDA/WS_EAAV_Desviaciones.php?wsdl";
+	private static String NAMESPACE = "http://190.93.133.127:8080/EAAV-Desviaciones/ServerPDA";
 	
 		
 		
 	public ConnectServer(Context context, String Directorio){
 		this.ConnectServerContext = context;
 		this.DirectorioConexionServer = Directorio;
-		this.SQL = new SQLite(this.ConnectServerContext);
-		ArchConnectServer 	= new Archivos(this.ConnectServerContext,this.DirectorioConexionServer);
-		this._servidor 		= this.SQL.SelectShieldWhere("db_parametos", "valor", "item='servidor'");
-		this._puerto 		= this.SQL.SelectShieldWhere("db_parametros", "valor", "item='puerto'");
-		this._modulo 		= this.SQL.SelectShieldWhere("db_parametros", "valor", "item='servicio'");
-		this._web_service	= this.SQL.SelectShieldWhere("db_parametos", "valor", "item='web_service'");
-		
-		this.URL = this._servidor+"/"+this._puerto+"/"+this._modulo+"/"+this._web_service;
-		this.URL = this._servidor+"/"+this._puerto+"/"+this._modulo;		
+		SQL = new SQLite(this.ConnectServerContext);
+		ArchConnectServer = new Archivos(this.ConnectServerContext,this.DirectorioConexionServer);
+		this._servidor = this.SQL.SelectShieldWhere("db_parametros", "valor", "item='servidor'");
 	}
 	
 	

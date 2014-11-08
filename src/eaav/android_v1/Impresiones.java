@@ -1,5 +1,6 @@
 package eaav.android_v1;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import Miscelanea.ManagerBluetooth;
@@ -25,6 +26,8 @@ public class Impresiones {
     private String LabelFont;
     private String TextFont;
 	
+    DecimalFormat FormatoNumFactura = new DecimalFormat("0");
+    
 	public Impresiones(Context context){
 		this.context = context;
 	}
@@ -35,7 +38,7 @@ public class Impresiones {
 		SQLite ImpSQL = new SQLite(this.context);
 		String periodo_ini = ImpSQL.SelectShieldWhere("db_solicitudes", "periodo_ini", "revision = '" + Solicitud + "'");
 		String periodo_fin = ImpSQL.SelectShieldWhere("db_solicitudes", "periodo_fin", "revision = '" + Solicitud + "'");
-		String factura = ImpSQL.SelectShieldWhere("db_solicitudes", "factura", "revision = '" + Solicitud + "'");
+		double factura = ImpSQL.DoubleSelectShieldWhere("db_solicitudes", "factura", "revision = '" + Solicitud + "'");
 		String NumVisita = "";
 		String CamposGeneral = "";
 		String Nombre= "";
@@ -70,8 +73,7 @@ public class Impresiones {
 	        InfToPrinter = WrTitulo(InfToPrinter, "PROCESO DE FACTURACION", 0, 1.2);
 	        InfToPrinter = WrTitulo(InfToPrinter, "NOVEDAD DE VISITA TECNICA DE CRITICA", 0, 2);
 	        InfToPrinter = WrLabel(InfToPrinter, "Acta No:", "N" + CamposImpresion.get(0).toString() + "-" + CamposGeneral + "-" + CamposImpresion.get(7).toString(), 3, 0, 1);
-	        //String.format("%.7f", var)
-	        InfToPrinter = WrLabel(InfToPrinter, "Factura Investigacion: ", String.format("%.0f", factura), 3, 0, 1);
+	         InfToPrinter = WrLabel(InfToPrinter, "Factura Investigacion: ", FormatoNumFactura.format(factura), 3, 0, 1);
 	        InfToPrinter = WrLabel(InfToPrinter, "Periodo Investigacion:", periodo_ini, 3, 0, 0);
 	        InfToPrinter = WrLabel(InfToPrinter, " a ", periodo_fin, 365, 0, 1.5);
 	        
@@ -135,7 +137,7 @@ public class Impresiones {
 		SQLite ImpSQL = new SQLite(this.context);
 		String periodo_ini = ImpSQL.SelectShieldWhere("db_solicitudes", "periodo_ini", "revision = '" + Solicitud + "'");
 		String periodo_fin = ImpSQL.SelectShieldWhere("db_solicitudes", "periodo_fin", "revision = '" + Solicitud + "'");
-		String factura = ImpSQL.SelectShieldWhere("db_solicitudes", "factura", "revision = '" + Solicitud + "'");
+		double factura = ImpSQL.DoubleSelectShieldWhere("db_solicitudes", "factura", "revision = '" + Solicitud + "'");
 		
 		String CamposGeneral = "";
 		String Direccion = "";
@@ -175,7 +177,7 @@ public class Impresiones {
 	        InfToPrinter = WrLabel(InfToPrinter, "Codigo: ", CamposImpresion.get(1).toString(), 270, 0, 1);
 	        InfToPrinter = WrLabel(InfToPrinter, "Ciclo: ", CamposImpresion.get(5).toString(), 3, 0, 0);
 	        InfToPrinter = WrLabel(InfToPrinter, "Acta No: ", "D" + CamposImpresion.get(0).toString() + "-" + CamposGeneral, 270, 0, 2);
-	        InfToPrinter = WrLabel(InfToPrinter, "Factura Investigacion: ", factura, 3, 0, 1);
+	        InfToPrinter = WrLabel(InfToPrinter, "Factura Investigacion: ", FormatoNumFactura.format(factura), 3, 0, 1);
 	        InfToPrinter = WrLabel(InfToPrinter, "Periodo Investigacion:", periodo_ini, 3, 0, 0);
 	        InfToPrinter = WrLabel(InfToPrinter, " a ", periodo_fin, 365, 0, 1.5);
 	

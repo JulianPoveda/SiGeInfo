@@ -13,7 +13,7 @@ public class SQLite {
 	//private static File SDCardRoot = Environment.getExternalStorageDirectory();
 	private static String N_BD;
 	//private static final String N_BD 	= SDCardRoot + File.separator + "EAAV" + File.separator + "BdEAAV_Android";	//Ruta de la base de datos
-	private static final int VERSION_BD = 11;																		//Version de la base de datos
+	private static final int VERSION_BD = 12;																		//Version de la base de datos
 	
 	private BDHelper nHelper;
 	private final Context nContexto;
@@ -178,17 +178,17 @@ public class SQLite {
 			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('pda','1000',0) ");
 			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('servidor','190.93.133.127',0) ");
 			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('puerto','8080',0) ");
-			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('servicio','EAAV-Desviaciones/ServerPDA',0) ");
+			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('servicio','EAAV-Desviaciones/ServerPDA/ServerToPDA.php',0) ");
 			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('nombre_tecnico','sin_asignar',1)");
 			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('cedula_tecnico','00000000',1)");
 			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('impresora','MZ320',1)");
-			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('web_service','WS_EAAV_Desviaciones.php?wsdl',0)");
+			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('web_service','WS_EAAV_Desviaciones.php',0)");
 			db.execSQL("INSERT INTO db_parametros (item,valor,nivel) VALUES ('version','2.5',0)");
 		}
 
 		@Override
 		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-			db.execSQL("UPDATE db_parametros SET valor = '2.5' WHERE item = 'version'");
+			db.execSQL("UPDATE db_parametros SET valor = '2.5.1' WHERE item = 'version'");
 		}
 	}
 	
@@ -408,6 +408,51 @@ public class SQLite {
 		}		
 	}*/
 	
+	/**Funcion que consulta un campo de una tabla segun la condicion recibida y retorna el resultado como un String
+	 * @param _tabla		->Tabla sobre la cual se va a trabajar
+	 * @param _campo		->Campo que se quiere consultar
+	 * @param _condicion	->Condicion para filtro de la consulta
+	 * @return
+	 */
+	public String StrSelectShieldWhere(String _tabla, String _campo, String _condicion){
+		String strRetorno = null;
+		abrir();
+		try{
+			Cursor c = nBD.rawQuery("SELECT " + _campo + " FROM " + _tabla + " WHERE " + _condicion, null);
+			for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
+				strRetorno = c.getString(0);
+			}			
+		}
+		catch(Exception e){
+			e.toString();
+			strRetorno = null;
+		}
+		cerrar();
+		return strRetorno;
+	}
+	
+	
+	/**Funcion que consulta un campo de una tabla segun la condicion recibida y retorna el resultado como un double
+	 * @param _tabla		->Tabla sobre la cual se va a trabajar
+	 * @param _campo		->Campo que se quiere consultar
+	 * @param _condicion	->Condicion para filtro de la consulta
+	 * @return
+	 */
+	public double DoubleSelectShieldWhere(String _tabla, String _campo, String _condicion){
+		double intRetorno = -1;
+		abrir();
+		try{
+			Cursor c = nBD.rawQuery("SELECT " + _campo + " FROM " + _tabla + " WHERE " + _condicion, null);
+			for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
+				intRetorno = c.getDouble(0);
+			}			
+		}
+		catch(Exception e){
+			intRetorno = -1;
+		}
+		cerrar();
+		return intRetorno;
+	}
 	
 	public boolean ExisteRegistros(String Tabla, String Condicion){
 		ValorRetorno = false;
