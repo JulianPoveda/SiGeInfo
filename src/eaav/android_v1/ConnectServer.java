@@ -38,8 +38,11 @@ public class ConnectServer {
 	private String 	_servicio;
 	
 	//nusoap
-	private static String URL		= "http://190.93.133.127:8080/EAAV-Desviaciones/ServerPDA/WS_EAAV_Desviaciones.php?wsdl";
-	private static String NAMESPACE = "http://190.93.133.127:8080/EAAV-Desviaciones/ServerPDA";
+	//private static String URL		= "http://190.93.133.127:8080/EAAV-Desviaciones/ServerPDA/WS_EAAV_Desviaciones.php?wsdl";
+	//private static String NAMESPACE = "http://190.93.133.127:8080/EAAV-Desviaciones/ServerPDA";
+	
+	private String URL;
+	private String NAMESPACE;
 	
 		
 		
@@ -48,7 +51,12 @@ public class ConnectServer {
 		this.DirectorioConexionServer = Directorio;
 		SQL = new SQLite(this.ConnectServerContext);
 		ArchConnectServer = new Archivos(this.ConnectServerContext,this.DirectorioConexionServer);
-		this._servidor = this.SQL.SelectShieldWhere("db_parametros", "valor", "item='servidor'");
+		this._servidor 		= this.SQL.SelectShieldWhere("db_parametros", "valor", "item='servidor'");
+		this._puerto 		= this.SQL.SelectShieldWhere("db_parametros", "valor", "item='puerto'");
+		this._servicio 		= this.SQL.SelectShieldWhere("db_parametros", "valor","item='servicio'");
+		this._web_service 	= this.SQL.SelectShieldWhere("db_parametros", "valor","item='web_service'");
+		this.URL 		= this._servidor+":"+this._puerto+"/"+this._servicio+"/"+this._web_service;
+		this.NAMESPACE 	= this._servidor+":"+this._puerto+"/"+this._servicio;
 	}
 	
 	
