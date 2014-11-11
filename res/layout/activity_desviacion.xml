@@ -34,6 +34,408 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <RelativeLayout
+                    android:id="@+id/InfVisitaTecnica"
+                    android:layout_width="316dp"
+                    android:layout_height="match_parent"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/LblVisitaTecnicaElemento"
+                        android:layout_width="170dp"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/LblVisitaTecnicaElemento"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <Spinner
+                        android:id="@+id/CmbVisitaTecnicaElemento"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_above="@+id/LblVisitaTecnicaItem1"
+                        android:layout_toRightOf="@+id/LblVisitaTecnicaElemento" />
+
+                    <Spinner
+                        android:id="@+id/CmbVisitaTecnicaItem1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignLeft="@+id/TxtVisitaTecnicaCantidad"
+                        android:layout_alignRight="@+id/CmbVisitaTecnicaElemento"
+                        android:layout_alignTop="@+id/LblVisitaTecnicaItem1" />
+
+                    <TextView
+                        android:id="@+id/LblVisitaTecnicaCantidad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/TxtVisitaTecnicaCantidad"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignRight="@+id/LblVisitaTecnicaElemento"
+                        android:layout_below="@+id/LblVisitaTecnicaElemento"
+                        android:gravity="center_vertical"
+                        android:text="@string/LblVisitaTecnicaCantidad"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/LblVisitaTecnicaItem1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignRight="@+id/LblVisitaTecnicaElemento"
+                        android:layout_below="@+id/LblVisitaTecnicaElemento"
+                        android:layout_marginTop="44dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/LblVisitaTecnicaItem1"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id/TxtVisitaTecnicaCantidad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/CmbVisitaTecnicaElemento"
+                        android:layout_below="@+id/LblVisitaTecnicaElemento"
+                        android:layout_toRightOf="@+id/LblVisitaTecnicaElemento"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <Spinner
+                        android:id="@+id/CmbVisitaTecnicaItem2"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignRight="@+id/CmbVisitaTecnicaItem1"
+                        android:layout_below="@+id/CmbVisitaTecnicaItem1"
+                        android:layout_toRightOf="@+id/LblVisitaTecnicaItem1" />
+
+                    <TextView
+                        android:id="@+id/LblVisitaTecnicaItem2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/CmbVisitaTecnicaItem2"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/LblVisitaTecnicaItem1"
+                        android:layout_toLeftOf="@+id/CmbVisitaTecnicaItem2"
+                        android:gravity="center_vertical"
+                        android:text="@string/LblVisitaTecnicaItem2"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <Spinner
+                        android:id="@+id/CmbVisitaTecnicaItem3"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignLeft="@+id/CmbVisitaTecnicaItem2"
+                        android:layout_alignRight="@+id/CmbVisitaTecnicaItem2"
+                        android:layout_below="@+id/CmbVisitaTecnicaItem2" />
+
+                    <TextView
+                        android:id="@+id/LblVisitaTecnicaItem3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/CmbVisitaTecnicaItem3"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignRight="@+id/LblVisitaTecnicaItem2"
+                        android:layout_alignTop="@+id/CmbVisitaTecnicaItem3"
+                        android:gravity="center_vertical"
+                        android:text="@string/LblVisitaTecnicaItem3"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/LblVisitaTecnicaOtro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/TxtVisitaTecnicaOtro"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignTop="@+id/TxtVisitaTecnicaOtro"
+                        android:gravity="center_vertical"
+                        android:text="@string/LblVisitaTecnicaOtro"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id/TxtVisitaTecnicaOtro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/CmbVisitaTecnicaItem3"
+                        android:layout_toLeftOf="@+id/CmbVisitaTecnicaOtro"
+                        android:layout_toRightOf="@+id/LblVisitaTecnicaOtro"
+                        android:ems="10"
+                        android:inputType="text" />
+
+                    <Spinner
+                        android:id="@+id/CmbVisitaTecnicaOtro"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_alignBottom="@+id/TxtVisitaTecnicaOtro"
+                        android:layout_alignRight="@+id/CmbVisitaTecnicaItem3" />
+
+                    <Button
+                        android:id="@+id/BtnVisitaTecnicaGuardarElementos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignRight="@+id/CmbVisitaTecnicaOtro"
+                        android:layout_below="@+id/TxtVisitaTecnicaOtro"
+                        android:text="@string/BtnVisitaTecnicaGuardarElementos" />
+
+                    <TextView
+                        android:id="@+id/LblVisitaTecnicaRegistroPaso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_above="@+id/TxtVisitaTecnicaCantidad"
+                        android:layout_marginLeft="29dp"
+                        android:layout_toRightOf="@+id/CmbVisitaTecnicaElemento"
+                        android:gravity="center_vertical"
+                        android:text="@string/LblVisitaTecnicaRegistroPaso"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <Spinner
+                        android:id="@+id/CmbVisitaTecnicaRegistroPaso"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_alignTop="@+id/LblVisitaTecnicaRegistroPaso"
+                        android:layout_toRightOf="@+id/LblVisitaTecnicaRegistroPaso" />
+
+                    <Spinner
+                        android:id="@+id/CmbVisitaTecnicaRegistro"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/LblVisitaTecnicaRegistroAntifraude" />
+
+                    <Spinner
+                        android:id="@+id/CmbVisitaTecnicaDestruido"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignLeft="@+id/CmbVisitaTecnicaRegistroPaso"
+                        android:layout_alignTop="@+id/TxtVisitaTecnicaCantidad"
+                        android:layout_toLeftOf="@+id/LblVisitaTecnicaRegistroAntifraude" />
+
+                    <TextView
+                        android:id="@+id/LblVisitaTecnicaDestruido"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/CmbVisitaTecnicaDestruido"
+                        android:layout_alignLeft="@+id/LblVisitaTecnicaRegistroPaso"
+                        android:layout_below="@+id/LblVisitaTecnicaRegistroPaso"
+                        android:layout_toLeftOf="@+id/CmbVisitaTecnicaDestruido"
+                        android:gravity="center_vertical"
+                        android:text="@string/LblVisitaTecnicaDestruido"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/LblListraTrabajoSolicitud"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/TxtVisitaTecnicaCantidad"
+                        android:layout_alignRight="@+id/LblVisitaTecnicaRegistroAntifraude"
+                        android:layout_alignTop="@+id/CmbVisitaTecnicaDestruido"
+                        android:layout_toRightOf="@+id/CmbVisitaTecnicaDestruido"
+                        android:gravity="center_vertical"
+                        android:text="@string/LblVisitaTecnicaInvertido"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <Spinner
+                        android:id="@+id/CmbVisitaTecnicaInvertido"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignLeft="@+id/CmbVisitaTecnicaRegistro"
+                        android:layout_alignTop="@+id/LblListraTrabajoSolicitud" />
+
+                    <TextView
+                        android:id="@+id/LblVisitaTecnicaVidrioIlegible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/CmbVisitaTecnicaItem2"
+                        android:layout_alignLeft="@+id/LblVisitaTecnicaDestruido"
+                        android:layout_alignTop="@+id/CmbVisitaTecnicaItem1"
+                        android:layout_toLeftOf="@+id/CmbVisitaTecnicaDestruido"
+                        android:gravity="center_vertical"
+                        android:text="@string/LblVisitaTecnicaVidrioIlegible"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <Spinner
+                        android:id="@+id/CmbVisitaTecnicaVidrioIlegible"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignLeft="@+id/CmbVisitaTecnicaDestruido"
+                        android:layout_alignTop="@+id/LblVisitaTecnicaVidrioIlegible"
+                        android:layout_toLeftOf="@+id/LblListraTrabajoSolicitud" />
+
+                    <TextView
+                        android:id="@+id/LblVisitaTecnicaPrecintoSeguridad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/CmbVisitaTecnicaItem3"
+                        android:layout_alignRight="@+id/LblListraTrabajoSolicitud"
+                        android:layout_alignTop="@+id/CmbVisitaTecnicaVidrioIlegible"
+                        android:layout_toRightOf="@+id/CmbVisitaTecnicaVidrioIlegible"
+                        android:text="@string/LblVisitaTecnicaPrecintoSeguridad"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <Spinner
+                        android:id="@+id/CmbVisitaTecnicaPrecintoSeguridad"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignLeft="@+id/CmbVisitaTecnicaInvertido"
+                        android:layout_alignTop="@+id/LblVisitaTecnicaPrecintoSeguridad" />
+
+                    <Spinner
+                        android:id="@+id/CmbVisitaTecnicaInstalaciones"
+                        android:layout_width="210dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/BtnVisitaTecnicaGuardarElementos" />
+
+                    <Spinner
+                        android:id="@+id/CmbVisitaTecnicaRtaInstalaciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@+id/CmbVisitaTecnicaInstalaciones"
+                        android:layout_alignTop="@+id/CmbVisitaTecnicaInstalaciones"
+                        android:layout_toLeftOf="@+id/BtnVisitaTecnicaInstalaciones"
+                        android:layout_toRightOf="@+id/CmbVisitaTecnicaInstalaciones" />
+
+                    <Button
+                        android:id="@+id/BtnVisitaTecnicaInstalaciones"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/CmbVisitaTecnicaRtaInstalaciones"
+                        android:layout_below="@+id/BtnVisitaTecnicaGuardarElementos"
+                        android:layout_toLeftOf="@+id/LblVisitaTecnicaRegistroPaso"
+                        android:text="@string/BtnVisitaTecnicaInstalaciones" />
+
+                    <TextView
+                        android:id="@+id/LblVisitaTecnicaElementoPrueba"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_above="@+id/TxtVisitaTecnicaOtro"
+                        android:layout_alignLeft="@+id/LblVisitaTecnicaVidrioIlegible"
+                        android:layout_toLeftOf="@+id/CmbVisitaTecnicaVidrioIlegible"
+                        android:gravity="center_vertical"
+                        android:text="@string/LblVisitaTecnicaElementoPrueba"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <Spinner
+                        android:id="@+id/CmbVisitaTecnicaElementoPrueba"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_alignLeft="@+id/CmbVisitaTecnicaVidrioIlegible"
+                        android:layout_alignTop="@+id/LblVisitaTecnicaElementoPrueba"
+                        android:layout_toLeftOf="@+id/BtnVisitaTecnicaPruebaEstanqueidad" />
+
+                    <TextView
+                        android:id="@+id/LblVisitaTecnicaResultado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/BtnVisitaTecnicaGuardarElementos"
+                        android:layout_alignLeft="@+id/LblVisitaTecnicaElementoPrueba"
+                        android:layout_alignRight="@+id/LblVisitaTecnicaElementoPrueba"
+                        android:layout_alignTop="@+id/TxtVisitaTecnicaOtro"
+                        android:gravity="center_vertical"
+                        android:text="@string/LblVisitaTecnicaResultado"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <Spinner
+                        android:id="@+id/CmbVisitaTecnicaEstanqueidadResultado"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_alignLeft="@+id/CmbVisitaTecnicaElementoPrueba"
+                        android:layout_alignRight="@+id/CmbVisitaTecnicaElementoPrueba"
+                        android:layout_alignTop="@+id/LblVisitaTecnicaResultado" />
+
+                    <TextView
+                        android:id="@+id/LblVisitaTecnicaCapacidad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/CmbVisitaTecnicaCapacidadMedida"
+                        android:layout_alignLeft="@+id/LblVisitaTecnicaResultado"
+                        android:layout_alignRight="@+id/LblVisitaTecnicaResultado"
+                        android:layout_alignTop="@+id/BtnVisitaTecnicaGuardarElementos"
+                        android:gravity="center_vertical"
+                        android:text="@string/LblVisitaTecnicaCapacidad"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <Spinner
+                        android:id="@+id/CmbVisitaTecnicaCapacidadMedida"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/CmbVisitaTecnicaEstanqueidadResultado"
+                        android:layout_toRightOf="@+id/CmbVisitaTecnicaEstanqueidadResultado" />
+
+                    <TextView
+                        android:id="@+id/LblVisitaTecnicaFuga"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/TxtVisitaTecnicaFuga"
+                        android:layout_alignLeft="@+id/LblVisitaTecnicaCapacidad"
+                        android:layout_alignRight="@+id/LblVisitaTecnicaCapacidad"
+                        android:layout_below="@+id/LblVisitaTecnicaCapacidad"
+                        android:gravity="center_vertical"
+                        android:text="@string/LblVisitaTecnicaFuga"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <Spinner
+                        android:id="@+id/CmbVisitaTecnicaMedidaFuga"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignLeft="@+id/CmbVisitaTecnicaCapacidadMedida"
+                        android:layout_alignTop="@+id/BtnVisitaTecnicaInstalaciones" />
+
+                    <Button
+                        android:id="@+id/BtnVisitaTecnicaPruebaEstanqueidad"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/LblVisitaTecnicaResultado"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/CmbVisitaTecnicaElementoPrueba"
+                        android:text="@string/BtnVisitaTecnicaPruebaEstanqueidad" />
+
+                    <EditText
+                        android:id="@+id/TxtVisitaTecnicaCapacidad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/LblVisitaTecnicaCapacidad"
+                        android:layout_alignRight="@+id/CmbVisitaTecnicaEstanqueidadResultado"
+                        android:layout_below="@+id/LblVisitaTecnicaResultado"
+                        android:layout_toRightOf="@+id/LblVisitaTecnicaResultado"
+                        android:ems="10"
+                        android:inputType="number|text"
+                        android:text="@string/TxtEmpty" />
+
+                    <EditText
+                        android:id="@+id/TxtVisitaTecnicaFuga"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/CmbVisitaTecnicaMedidaFuga"
+                        android:layout_alignLeft="@+id/TxtVisitaTecnicaCapacidad"
+                        android:layout_alignTop="@+id/CmbVisitaTecnicaMedidaFuga"
+                        android:layout_toLeftOf="@+id/CmbVisitaTecnicaMedidaFuga"
+                        android:ems="10"
+                        android:inputType="number|text"
+                        android:text="@string/TxtEmpty" />
+
+                    <TextView
+                        android:id="@+id/LblVisitaTecnicaRegistroAntifraude"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/CmbVisitaTecnicaRegistroPaso"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/CmbVisitaTecnicaRegistroPaso"
+                        android:gravity="center_vertical"
+                        android:text="@string/LblVisitaTecnicaRegistroAntifraude"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <Button
+                        android:id="@+id/BtnGuardarDatosMedidor"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/CmbVisitaTecnicaItem2"
+                        android:layout_alignLeft="@+id/LblVisitaTecnicaElementoPrueba"
+                        android:layout_alignRight="@+id/CmbVisitaTecnicaVidrioIlegible"
+                        android:layout_alignTop="@+id/CmbVisitaTecnicaItem2"
+                        android:text="@string/BtnGuardarDatosMedidor" />
+                </RelativeLayout>
+
                 <LinearLayout
                     android:id="@+id/InfGeneral"
                     android:layout_width="match_parent"
@@ -588,408 +990,6 @@
                             android:text="@string/BtnGuardarInfgeneral" />
                     </RelativeLayout>
                 </LinearLayout>
-
-                <RelativeLayout
-                    android:id="@+id/InfVisitaTecnica"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:baselineAligned="false"
-                    android:orientation="horizontal" >
-
-                    <TextView
-                        android:id="@+id/LblVisitaTecnicaElemento"
-                        android:layout_width="170dp"
-                        android:layout_height="40dp"
-                        android:gravity="center_vertical"
-                        android:text="@string/LblVisitaTecnicaElemento"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <Spinner
-                        android:id="@+id/CmbVisitaTecnicaElemento"
-                        android:layout_width="180dp"
-                        android:layout_height="40dp"
-                        android:layout_above="@+id/LblVisitaTecnicaItem1"
-                        android:layout_toRightOf="@+id/LblVisitaTecnicaElemento" />
-
-                    <Spinner
-                        android:id="@+id/CmbVisitaTecnicaItem1"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_alignLeft="@+id/TxtVisitaTecnicaCantidad"
-                        android:layout_alignRight="@+id/CmbVisitaTecnicaElemento"
-                        android:layout_alignTop="@+id/LblVisitaTecnicaItem1" />
-
-                    <TextView
-                        android:id="@+id/LblVisitaTecnicaCantidad"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/TxtVisitaTecnicaCantidad"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignRight="@+id/LblVisitaTecnicaElemento"
-                        android:layout_below="@+id/LblVisitaTecnicaElemento"
-                        android:gravity="center_vertical"
-                        android:text="@string/LblVisitaTecnicaCantidad"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <TextView
-                        android:id="@+id/LblVisitaTecnicaItem1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignRight="@+id/LblVisitaTecnicaElemento"
-                        android:layout_below="@+id/LblVisitaTecnicaElemento"
-                        android:layout_marginTop="44dp"
-                        android:gravity="center_vertical"
-                        android:text="@string/LblVisitaTecnicaItem1"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <EditText
-                        android:id="@+id/TxtVisitaTecnicaCantidad"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignRight="@+id/CmbVisitaTecnicaElemento"
-                        android:layout_below="@+id/LblVisitaTecnicaElemento"
-                        android:layout_toRightOf="@+id/LblVisitaTecnicaElemento"
-                        android:ems="10"
-                        android:inputType="number" />
-
-                    <Spinner
-                        android:id="@+id/CmbVisitaTecnicaItem2"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_alignRight="@+id/CmbVisitaTecnicaItem1"
-                        android:layout_below="@+id/CmbVisitaTecnicaItem1"
-                        android:layout_toRightOf="@+id/LblVisitaTecnicaItem1" />
-
-                    <TextView
-                        android:id="@+id/LblVisitaTecnicaItem2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/CmbVisitaTecnicaItem2"
-                        android:layout_alignParentLeft="true"
-                        android:layout_below="@+id/LblVisitaTecnicaItem1"
-                        android:layout_toLeftOf="@+id/CmbVisitaTecnicaItem2"
-                        android:gravity="center_vertical"
-                        android:text="@string/LblVisitaTecnicaItem2"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <Spinner
-                        android:id="@+id/CmbVisitaTecnicaItem3"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_alignLeft="@+id/CmbVisitaTecnicaItem2"
-                        android:layout_alignRight="@+id/CmbVisitaTecnicaItem2"
-                        android:layout_below="@+id/CmbVisitaTecnicaItem2" />
-
-                    <TextView
-                        android:id="@+id/LblVisitaTecnicaItem3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/CmbVisitaTecnicaItem3"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignRight="@+id/LblVisitaTecnicaItem2"
-                        android:layout_alignTop="@+id/CmbVisitaTecnicaItem3"
-                        android:gravity="center_vertical"
-                        android:text="@string/LblVisitaTecnicaItem3"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <TextView
-                        android:id="@+id/LblVisitaTecnicaOtro"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/TxtVisitaTecnicaOtro"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignTop="@+id/TxtVisitaTecnicaOtro"
-                        android:gravity="center_vertical"
-                        android:text="@string/LblVisitaTecnicaOtro"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <EditText
-                        android:id="@+id/TxtVisitaTecnicaOtro"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/CmbVisitaTecnicaItem3"
-                        android:layout_toLeftOf="@+id/CmbVisitaTecnicaOtro"
-                        android:layout_toRightOf="@+id/LblVisitaTecnicaOtro"
-                        android:ems="10"
-                        android:inputType="text" />
-
-                    <Spinner
-                        android:id="@+id/CmbVisitaTecnicaOtro"
-                        android:layout_width="100dp"
-                        android:layout_height="40dp"
-                        android:layout_alignBottom="@+id/TxtVisitaTecnicaOtro"
-                        android:layout_alignRight="@+id/CmbVisitaTecnicaItem3" />
-
-                    <Button
-                        android:id="@+id/BtnVisitaTecnicaGuardarElementos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignRight="@+id/CmbVisitaTecnicaOtro"
-                        android:layout_below="@+id/TxtVisitaTecnicaOtro"
-                        android:text="@string/BtnVisitaTecnicaGuardarElementos" />
-
-                    <TextView
-                        android:id="@+id/LblVisitaTecnicaRegistroPaso"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_above="@+id/TxtVisitaTecnicaCantidad"
-                        android:layout_marginLeft="29dp"
-                        android:layout_toRightOf="@+id/CmbVisitaTecnicaElemento"
-                        android:gravity="center_vertical"
-                        android:text="@string/LblVisitaTecnicaRegistroPaso"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <Spinner
-                        android:id="@+id/CmbVisitaTecnicaRegistroPaso"
-                        android:layout_width="130dp"
-                        android:layout_height="40dp"
-                        android:layout_alignTop="@+id/LblVisitaTecnicaRegistroPaso"
-                        android:layout_toRightOf="@+id/LblVisitaTecnicaRegistroPaso" />
-
-                    <Spinner
-                        android:id="@+id/CmbVisitaTecnicaRegistro"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_toRightOf="@+id/LblVisitaTecnicaRegistroAntifraude" />
-
-                    <Spinner
-                        android:id="@+id/CmbVisitaTecnicaDestruido"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_alignLeft="@+id/CmbVisitaTecnicaRegistroPaso"
-                        android:layout_alignTop="@+id/TxtVisitaTecnicaCantidad"
-                        android:layout_toLeftOf="@+id/LblVisitaTecnicaRegistroAntifraude" />
-
-                    <TextView
-                        android:id="@+id/LblVisitaTecnicaDestruido"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/CmbVisitaTecnicaDestruido"
-                        android:layout_alignLeft="@+id/LblVisitaTecnicaRegistroPaso"
-                        android:layout_below="@+id/LblVisitaTecnicaRegistroPaso"
-                        android:layout_toLeftOf="@+id/CmbVisitaTecnicaDestruido"
-                        android:gravity="center_vertical"
-                        android:text="@string/LblVisitaTecnicaDestruido"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <TextView
-                        android:id="@+id/LblListraTrabajoSolicitud"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/TxtVisitaTecnicaCantidad"
-                        android:layout_alignRight="@+id/LblVisitaTecnicaRegistroAntifraude"
-                        android:layout_alignTop="@+id/CmbVisitaTecnicaDestruido"
-                        android:layout_toRightOf="@+id/CmbVisitaTecnicaDestruido"
-                        android:gravity="center_vertical"
-                        android:text="@string/LblVisitaTecnicaInvertido"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <Spinner
-                        android:id="@+id/CmbVisitaTecnicaInvertido"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_alignLeft="@+id/CmbVisitaTecnicaRegistro"
-                        android:layout_alignTop="@+id/LblListraTrabajoSolicitud" />
-
-                    <TextView
-                        android:id="@+id/LblVisitaTecnicaVidrioIlegible"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_above="@+id/CmbVisitaTecnicaItem2"
-                        android:layout_alignLeft="@+id/LblVisitaTecnicaDestruido"
-                        android:layout_alignTop="@+id/CmbVisitaTecnicaItem1"
-                        android:layout_toLeftOf="@+id/CmbVisitaTecnicaDestruido"
-                        android:gravity="center_vertical"
-                        android:text="@string/LblVisitaTecnicaVidrioIlegible"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <Spinner
-                        android:id="@+id/CmbVisitaTecnicaVidrioIlegible"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_alignLeft="@+id/CmbVisitaTecnicaDestruido"
-                        android:layout_alignTop="@+id/LblVisitaTecnicaVidrioIlegible"
-                        android:layout_toLeftOf="@+id/LblListraTrabajoSolicitud" />
-
-                    <TextView
-                        android:id="@+id/LblVisitaTecnicaPrecintoSeguridad"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_above="@+id/CmbVisitaTecnicaItem3"
-                        android:layout_alignRight="@+id/LblListraTrabajoSolicitud"
-                        android:layout_alignTop="@+id/CmbVisitaTecnicaVidrioIlegible"
-                        android:layout_toRightOf="@+id/CmbVisitaTecnicaVidrioIlegible"
-                        android:text="@string/LblVisitaTecnicaPrecintoSeguridad"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <Spinner
-                        android:id="@+id/CmbVisitaTecnicaPrecintoSeguridad"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_alignLeft="@+id/CmbVisitaTecnicaInvertido"
-                        android:layout_alignTop="@+id/LblVisitaTecnicaPrecintoSeguridad" />
-
-                    <Spinner
-                        android:id="@+id/CmbVisitaTecnicaInstalaciones"
-                        android:layout_width="210dp"
-                        android:layout_height="40dp"
-                        android:layout_alignParentLeft="true"
-                        android:layout_below="@+id/BtnVisitaTecnicaGuardarElementos" />
-
-                    <Spinner
-                        android:id="@+id/CmbVisitaTecnicaRtaInstalaciones"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignBottom="@+id/CmbVisitaTecnicaInstalaciones"
-                        android:layout_alignTop="@+id/CmbVisitaTecnicaInstalaciones"
-                        android:layout_toLeftOf="@+id/BtnVisitaTecnicaInstalaciones"
-                        android:layout_toRightOf="@+id/CmbVisitaTecnicaInstalaciones" />
-
-                    <Button
-                        android:id="@+id/BtnVisitaTecnicaInstalaciones"
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/CmbVisitaTecnicaRtaInstalaciones"
-                        android:layout_below="@+id/BtnVisitaTecnicaGuardarElementos"
-                        android:layout_toLeftOf="@+id/LblVisitaTecnicaRegistroPaso"
-                        android:text="@string/BtnVisitaTecnicaInstalaciones" />
-
-                    <TextView
-                        android:id="@+id/LblVisitaTecnicaElementoPrueba"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_above="@+id/TxtVisitaTecnicaOtro"
-                        android:layout_alignLeft="@+id/LblVisitaTecnicaVidrioIlegible"
-                        android:layout_toLeftOf="@+id/CmbVisitaTecnicaVidrioIlegible"
-                        android:gravity="center_vertical"
-                        android:text="@string/LblVisitaTecnicaElementoPrueba"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <Spinner
-                        android:id="@+id/CmbVisitaTecnicaElementoPrueba"
-                        android:layout_width="150dp"
-                        android:layout_height="40dp"
-                        android:layout_alignLeft="@+id/CmbVisitaTecnicaVidrioIlegible"
-                        android:layout_alignTop="@+id/LblVisitaTecnicaElementoPrueba"
-                        android:layout_toLeftOf="@+id/BtnVisitaTecnicaPruebaEstanqueidad" />
-
-                    <TextView
-                        android:id="@+id/LblVisitaTecnicaResultado"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_above="@+id/BtnVisitaTecnicaGuardarElementos"
-                        android:layout_alignLeft="@+id/LblVisitaTecnicaElementoPrueba"
-                        android:layout_alignRight="@+id/LblVisitaTecnicaElementoPrueba"
-                        android:layout_alignTop="@+id/TxtVisitaTecnicaOtro"
-                        android:gravity="center_vertical"
-                        android:text="@string/LblVisitaTecnicaResultado"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <Spinner
-                        android:id="@+id/CmbVisitaTecnicaEstanqueidadResultado"
-                        android:layout_width="150dp"
-                        android:layout_height="40dp"
-                        android:layout_alignLeft="@+id/CmbVisitaTecnicaElementoPrueba"
-                        android:layout_alignRight="@+id/CmbVisitaTecnicaElementoPrueba"
-                        android:layout_alignTop="@+id/LblVisitaTecnicaResultado" />
-
-                    <TextView
-                        android:id="@+id/LblVisitaTecnicaCapacidad"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/CmbVisitaTecnicaCapacidadMedida"
-                        android:layout_alignLeft="@+id/LblVisitaTecnicaResultado"
-                        android:layout_alignRight="@+id/LblVisitaTecnicaResultado"
-                        android:layout_alignTop="@+id/BtnVisitaTecnicaGuardarElementos"
-                        android:gravity="center_vertical"
-                        android:text="@string/LblVisitaTecnicaCapacidad"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <Spinner
-                        android:id="@+id/CmbVisitaTecnicaCapacidadMedida"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_below="@+id/CmbVisitaTecnicaEstanqueidadResultado"
-                        android:layout_toRightOf="@+id/CmbVisitaTecnicaEstanqueidadResultado" />
-
-                    <TextView
-                        android:id="@+id/LblVisitaTecnicaFuga"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/TxtVisitaTecnicaFuga"
-                        android:layout_alignLeft="@+id/LblVisitaTecnicaCapacidad"
-                        android:layout_alignRight="@+id/LblVisitaTecnicaCapacidad"
-                        android:layout_below="@+id/LblVisitaTecnicaCapacidad"
-                        android:gravity="center_vertical"
-                        android:text="@string/LblVisitaTecnicaFuga"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <Spinner
-                        android:id="@+id/CmbVisitaTecnicaMedidaFuga"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_alignLeft="@+id/CmbVisitaTecnicaCapacidadMedida"
-                        android:layout_alignTop="@+id/BtnVisitaTecnicaInstalaciones" />
-
-                    <Button
-                        android:id="@+id/BtnVisitaTecnicaPruebaEstanqueidad"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/LblVisitaTecnicaResultado"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignTop="@+id/CmbVisitaTecnicaElementoPrueba"
-                        android:text="@string/BtnVisitaTecnicaPruebaEstanqueidad" />
-
-                    <EditText
-                        android:id="@+id/TxtVisitaTecnicaCapacidad"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/LblVisitaTecnicaCapacidad"
-                        android:layout_alignRight="@+id/CmbVisitaTecnicaEstanqueidadResultado"
-                        android:layout_below="@+id/LblVisitaTecnicaResultado"
-                        android:layout_toRightOf="@+id/LblVisitaTecnicaResultado"
-                        android:ems="10"
-                        android:inputType="number|text"
-                        android:text="@string/TxtEmpty" />
-
-                    <EditText
-                        android:id="@+id/TxtVisitaTecnicaFuga"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/CmbVisitaTecnicaMedidaFuga"
-                        android:layout_alignLeft="@+id/TxtVisitaTecnicaCapacidad"
-                        android:layout_alignTop="@+id/CmbVisitaTecnicaMedidaFuga"
-                        android:layout_toLeftOf="@+id/CmbVisitaTecnicaMedidaFuga"
-                        android:ems="10"
-                        android:inputType="number|text"
-                        android:text="@string/TxtEmpty" />
-
-                    <TextView
-                        android:id="@+id/LblVisitaTecnicaRegistroAntifraude"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/CmbVisitaTecnicaRegistroPaso"
-                        android:layout_alignParentTop="true"
-                        android:layout_toRightOf="@+id/CmbVisitaTecnicaRegistroPaso"
-                        android:gravity="center_vertical"
-                        android:text="@string/LblVisitaTecnicaRegistroAntifraude"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <Button
-                        android:id="@+id/BtnGuardarDatosMedidor"
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/CmbVisitaTecnicaItem2"
-                        android:layout_alignLeft="@+id/LblVisitaTecnicaElementoPrueba"
-                        android:layout_alignRight="@+id/CmbVisitaTecnicaVidrioIlegible"
-                        android:layout_alignTop="@+id/CmbVisitaTecnicaItem2"
-                        android:text="@string/BtnGuardarDatosMedidor" />
-                </RelativeLayout>
 
                 <LinearLayout
                     android:id="@+id/InfTecnica"

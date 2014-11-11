@@ -55,8 +55,8 @@ public class ConnectServer {
 		this._puerto 		= this.SQL.SelectShieldWhere("db_parametros", "valor", "item='puerto'");
 		this._servicio 		= this.SQL.SelectShieldWhere("db_parametros", "valor","item='servicio'");
 		this._web_service 	= this.SQL.SelectShieldWhere("db_parametros", "valor","item='web_service'");
-		this.URL 		= this._servidor+":"+this._puerto+"/"+this._servicio+"/"+this._web_service;
-		this.NAMESPACE 	= this._servidor+":"+this._puerto+"/"+this._servicio;
+		this.URL 			= this._servidor+":"+this._puerto+"/"+this._servicio+"/"+this._web_service;
+		this.NAMESPACE 		= this._servidor+":"+this._puerto+"/"+this._servicio;
 	}
 	
 	
@@ -386,7 +386,7 @@ public class ConnectServer {
     	    int bufferLength = 0; 
     	    
     		try {    			
-    			url = new URL("http://"+_servidor+":"+_puerto+"/"+_pagina+"?Proceso=Descargue&PDA="+_pda);
+    			url = new URL(_servidor+":"+_puerto+"/"+_pagina+"?Proceso=Descargue&PDA="+_pda);
 				urlConnection = (HttpURLConnection) url.openConnection();
     			urlConnection.setRequestMethod("GET");
     			urlConnection.setDoOutput(true);
