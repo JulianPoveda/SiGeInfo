@@ -36,7 +36,7 @@
 
                 <RelativeLayout
                     android:id="@+id/InfVisitaTecnica"
-                    android:layout_width="316dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:baselineAligned="false"
                     android:orientation="horizontal" >
@@ -96,7 +96,10 @@
                         android:layout_below="@+id/LblVisitaTecnicaElemento"
                         android:layout_toRightOf="@+id/LblVisitaTecnicaElemento"
                         android:ems="10"
-                        android:inputType="number" />
+                        android:inputType="number" >
+
+                        <requestFocus />
+                    </EditText>
 
                     <Spinner
                         android:id="@+id/CmbVisitaTecnicaItem2"
@@ -437,6 +440,434 @@
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:id="@+id/InfTecnica"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/LblInfTecnicaAcueducto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/CmbInfTecnicaAcueducto"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:gravity="center_vertical"
+                            android:text="@string/LblInfTecnicaAcueducto"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <Spinner
+                            android:id="@+id/CmbInfTecnicaAcueducto"
+                            android:layout_width="180dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/LblInfTecnicaAcueducto" />
+
+                        <EditText
+                            android:id="@+id/TxtInfTecnicaCual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/CmbInfTecnicaAcueducto"
+                            android:layout_alignRight="@+id/CmbInfTecnicaAcueducto"
+                            android:layout_below="@+id/LblInfTecnicaAcueducto"
+                            android:ems="10"
+                            android:inputType="text" />
+
+                        <TextView
+                            android:id="@+id/LblInfTecnicaCual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/TxtInfTecnicaCual"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignRight="@+id/LblInfTecnicaAcueducto"
+                            android:layout_below="@+id/LblInfTecnicaAcueducto"
+                            android:gravity="center_vertical"
+                            android:text="@string/LblInfTecnicaCual"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TextView
+                            android:id="@+id/LblInfTecnicaEscape"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignRight="@+id/LblInfTecnicaCual"
+                            android:layout_below="@+id/TxtInfTecnicaCual"
+                            android:gravity="center_vertical"
+                            android:text="@string/LblInfTecnicaEscape"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <Spinner
+                            android:id="@+id/CmbInfTecnicaEscape"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignLeft="@+id/TxtInfTecnicaCual"
+                            android:layout_alignTop="@+id/LblInfTecnicaEscape"
+                            android:layout_toLeftOf="@+id/CmbInfTecnicaBypass" />
+
+                        <Spinner
+                            android:id="@+id/CmbInfTecnicaCamaraMedidor"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignTop="@+id/LblInfTecnicaCamaraMedidor"
+                            android:layout_toRightOf="@+id/LblInfTecnicaCamaraMedidor" />
+
+                        <TextView
+                            android:id="@+id/LblInfTecnicaEstado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignRight="@+id/LblInfTecnicaServicioDirecto"
+                            android:layout_below="@+id/LblInfTecnicaCamaraMedidor"
+                            android:gravity="center_vertical"
+                            android:text="@string/LblInfTecnicaEstado"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <Spinner
+                            android:id="@+id/CmbInfTecnicaEstado"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignTop="@+id/LblInfTecnicaEstado"
+                            android:layout_toRightOf="@+id/LblInfTecnicaEscape" />
+
+                        <TextView
+                            android:id="@+id/LblInfTecnicaNumeroIndividual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/TxtInfTecnicaNumeroIndividual"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignTop="@+id/TxtInfTecnicaNumeroIndividual"
+                            android:gravity="center_vertical"
+                            android:text="@string/LblInfTecnicaNumero"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TextView
+                            android:id="@+id/LblInfTecnicaLecturaIndividual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/TxtInfTecnicaLecturaIndividual"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/TxtInfTecnicaNumeroIndividual"
+                            android:gravity="center_vertical"
+                            android:text="@string/LblInfTecnicaLecturaIndividual"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/TxtInfTecnicaLecturaIndividual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@+id/TxtInfTecnicaNumeroIndividual"
+                            android:layout_below="@+id/TxtInfTecnicaNumeroIndividual"
+                            android:layout_toRightOf="@+id/LblInfTecnicaLecturaIndividual"
+                            android:inputType="number" />
+
+                        <Spinner
+                            android:id="@+id/CmbInfTecnicaServicioDirecto"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@+id/CmbInfTecnicaEscape"
+                            android:layout_toLeftOf="@+id/LblInfTecnicaBypass"
+                            android:layout_toRightOf="@+id/LblInfTecnicaServicioDirecto" />
+
+                        <TextView
+                            android:id="@+id/LblInfTecnicaServicioDirecto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/CmbInfTecnicaServicioDirecto"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/LblInfTecnicaEscape"
+                            android:gravity="center_vertical"
+                            android:text="@string/LblInfTecnicaServicioDirecto"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TextView
+                            android:id="@+id/LblInfTecnicaCamaraMedidor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/CmbInfTecnicaServicioDirecto"
+                            android:gravity="center_vertical"
+                            android:text="@string/LblInfTecnicaCamaraMedidor"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <Spinner
+                            android:id="@+id/CmbInfTecnicaBypass"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignTop="@+id/LblInfTecnicaBypass"
+                            android:layout_toRightOf="@+id/LblInfTecnicaBypass" />
+
+                        <EditText
+                            android:id="@+id/TxtInfTecnicaMarcaIndividual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/TxtInfTecnicaNumeroIndividual"
+                            android:layout_alignLeft="@+id/CmbInfTecnicaDiametroIndividual"
+                            android:layout_alignParentRight="true"
+                            android:ems="10"
+                            android:inputType="text" />
+
+                        <TextView
+                            android:id="@+id/LblInfTecnicaMarcaIndividual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/TxtInfTecnicaLecturaIndividual"
+                            android:layout_alignTop="@+id/TxtInfTecnicaNumeroIndividual"
+                            android:layout_toRightOf="@+id/TxtInfTecnicaNumeroIndividual"
+                            android:gravity="center_vertical"
+                            android:text="@string/LblInfTecnicaMarca"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TextView
+                            android:id="@+id/LblInfTecnicaDiametroIndividual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/TxtInfTecnicaLecturaIndividual"
+                            android:layout_alignLeft="@+id/LblInfTecnicaMarcaIndividual"
+                            android:layout_alignTop="@+id/TxtInfTecnicaLecturaIndividual"
+                            android:gravity="center_vertical"
+                            android:text="@string/LblInfTecnicaDiametroIndividual"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <Spinner
+                            android:id="@+id/CmbInfTecnicaDiametroIndividual"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignTop="@+id/LblInfTecnicaDiametroIndividual"
+                            android:layout_toRightOf="@+id/LblInfTecnicaDiametroIndividual" />
+
+                        <TextView
+                            android:id="@+id/LblInfTecnicaBypass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/CmbInfTecnicaCamaraMedidor"
+                            android:layout_alignLeft="@+id/LblInfTecnicaMarcaIndividual"
+                            android:layout_below="@+id/CmbInfTecnicaEscape"
+                            android:gravity="center_vertical"
+                            android:text="@string/LblInfTecnicaBypass"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/TxtInfTecnicaNumeroIndividual"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/LblInfTecnicaEstado"
+                            android:layout_marginTop="32dp"
+                            android:layout_toRightOf="@+id/LblInfTecnicaNumeroIndividual"
+                            android:ems="10"
+                            android:inputType="text" />
+
+                        <TextView
+                            android:id="@+id/TituloInfTecnicaIndiviual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/LblInfTecnicaEstado"
+                            android:gravity="center_horizontal"
+                            android:text="@string/TituloInfTecnicaIndividual"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <Button
+                            android:id="@+id/BtnGuardarInfTecnica"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/CmbInfTecnicaBypass"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignTop="@+id/CmbInfTecnicaEscape"
+                            android:text="@string/BtnGuardarInfTecnica" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/TituloInfTecnicaTotalizador"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:gravity="center_horizontal"
+                            android:text="@string/TituloInfTecnicaTotalizador"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <TextView
+                            android:id="@+id/LblInfTecnicaNumeroTotalizador"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/TxtInfTecnicaMarcaTotalizador"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/TituloInfTecnicaTotalizador"
+                            android:gravity="center_vertical"
+                            android:text="@string/LblInfTecnicaNumero"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/TxtInfTecnicaNumeroTotalizador"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/LblInfTecnicaNumeroTotalizador"
+                            android:layout_toRightOf="@+id/LblInfTecnicaNumeroTotalizador"
+                            android:ems="10"
+                            android:inputType="text" />
+
+                        <TextView
+                            android:id="@+id/LblInfTecnicaMarcaTotalizador"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/CmbInfTecnicaDiametroTotalizador"
+                            android:layout_alignTop="@+id/TxtInfTecnicaNumeroTotalizador"
+                            android:layout_toRightOf="@+id/TxtInfTecnicaNumeroTotalizador"
+                            android:gravity="center_vertical"
+                            android:text="@string/LblInfTecnicaMarca"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/TxtInfTecnicaMarcaTotalizador"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/TituloInfTecnicaTotalizador"
+                            android:layout_toRightOf="@+id/LblInfTecnicaMarcaTotalizador"
+                            android:ems="10"
+                            android:inputType="text" />
+
+                        <TextView
+                            android:id="@+id/LblInfTecnicaLecturaTotalizador"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/CmbInfTecnicaDiametroTotalizador"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/LblInfTecnicaNumeroTotalizador"
+                            android:gravity="center_vertical"
+                            android:text="@string/LblInfTecnicaLecturaIndividual"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TextView
+                            android:id="@+id/LblInfTecnicaDiametroTotalizador"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/TxtInfTecnicaLecturaTotalizador"
+                            android:layout_alignLeft="@+id/LblInfTecnicaMarcaTotalizador"
+                            android:layout_below="@+id/LblInfTecnicaMarcaTotalizador"
+                            android:gravity="center_vertical"
+                            android:text="@string/LblInfTecnicaDiametroIndividual"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <Spinner
+                            android:id="@+id/CmbInfTecnicaDiametroTotalizador"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@+id/LblInfTecnicaNumeroTotalizador"
+                            android:layout_toRightOf="@+id/LblInfTecnicaDiametroTotalizador" />
+
+                        <EditText
+                            android:id="@+id/TxtInfTecnicaLecturaTotalizador"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/TxtInfTecnicaNumeroTotalizador"
+                            android:layout_alignRight="@+id/TxtInfTecnicaNumeroTotalizador"
+                            android:layout_below="@+id/LblInfTecnicaNumeroTotalizador"
+                            android:ems="10"
+                            android:inputType="number" />
+
+                        <TextView
+                            android:id="@+id/TituloInfTecnicaDiagnostico"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/LblInfTecnicaLecturaTotalizador"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="@string/TituloInfTecnicaDiagnostico"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <Spinner
+                            android:id="@+id/CmbInfTecnicaSegundoConcepto"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignRight="@+id/LblInfTecnicaMarcaTotalizador"
+                            android:layout_alignTop="@+id/LblInfTecnicaSegundoConcepto"
+                            android:layout_toRightOf="@+id/LblInfTecnicaSegundoConcepto" />
+
+                        <Button
+                            android:id="@+id/BtnInfTecnicaObservacion"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/CmbInfTecnicaSegundoConcepto"
+                            android:layout_alignParentRight="true"
+                            android:layout_toRightOf="@+id/LblInfTecnicaMarcaTotalizador"
+                            android:text="@string/BtnInfTecnicaObservacion" />
+
+                        <TextView
+                            android:id="@+id/LblInfTecnicaSegundoConcepto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/TituloInfTecnicaDiagnostico"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/LblInfTecnicaSegundoConcepto"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TextView
+                            android:id="@+id/LblInfTecnicaRespuesta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/LblInfTecnicaSegundoConcepto"
+                            android:gravity="center_vertical"
+                            android:text="@string/LblInfTecnicaRespuesta"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <Spinner
+                            android:id="@+id/CmbInfTecnicaRespuesta"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignTop="@+id/LblInfTecnicaRespuesta"
+                            android:layout_toRightOf="@+id/LblInfTecnicaRespuesta" />
+
+                        <TextView
+                            android:id="@+id/LblInfTecnicaObservacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/LblInfTecnicaRespuesta"
+                            android:text="@string/LblInfTecnicaObservacion"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/TxtInfTecnicaObservacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/LblInfTecnicaObservacion"
+                            android:ems="10"
+                            android:inputType="textMultiLine" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
                     android:id="@+id/InfGeneral"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -456,7 +887,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
-                            android:layout_toRightOf="@+id/LblDesviacionRevision"
+                            android:layout_toRightOf="@+id/LblDesviacionPromedio"
                             android:inputType="text" />
 
                         <EditText
@@ -487,9 +918,11 @@
                             android:layout_alignBottom="@+id/TxtDesviacionRevision"
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentTop="true"
+                            android:layout_toLeftOf="@+id/TxtDesviacionRevision"
                             android:gravity="center_vertical"
                             android:text="@string/LblDesviacionRevision"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="18sp" />
 
                         <TextView
                             android:id="@+id/LblDesviacionNombre"
@@ -988,437 +1421,6 @@
                             android:layout_alignParentRight="true"
                             android:layout_below="@+id/TxtDesviacionCedulaTestigo"
                             android:text="@string/BtnGuardarInfgeneral" />
-                    </RelativeLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/InfTecnica"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:baselineAligned="false"
-                    android:orientation="horizontal" >
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1" >
-
-                        <TextView
-                            android:id="@+id/LblInfTecnicaAcueducto"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/CmbInfTecnicaAcueducto"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentTop="true"
-                            android:gravity="center_vertical"
-                            android:text="@string/LblInfTecnicaAcueducto"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                        <Spinner
-                            android:id="@+id/CmbInfTecnicaAcueducto"
-                            android:layout_width="180dp"
-                            android:layout_height="40dp"
-                            android:layout_alignParentRight="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_toRightOf="@+id/LblInfTecnicaAcueducto" />
-
-                        <EditText
-                            android:id="@+id/TxtInfTecnicaCual"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignLeft="@+id/CmbInfTecnicaAcueducto"
-                            android:layout_alignRight="@+id/CmbInfTecnicaAcueducto"
-                            android:layout_below="@+id/LblInfTecnicaAcueducto"
-                            android:ems="10"
-                            android:inputType="text" >
-
-                            <requestFocus />
-                        </EditText>
-
-                        <TextView
-                            android:id="@+id/LblInfTecnicaCual"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/TxtInfTecnicaCual"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignRight="@+id/LblInfTecnicaAcueducto"
-                            android:layout_below="@+id/LblInfTecnicaAcueducto"
-                            android:gravity="center_vertical"
-                            android:text="@string/LblInfTecnicaCual"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                        <TextView
-                            android:id="@+id/LblInfTecnicaEscape"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignRight="@+id/LblInfTecnicaCual"
-                            android:layout_below="@+id/TxtInfTecnicaCual"
-                            android:gravity="center_vertical"
-                            android:text="@string/LblInfTecnicaEscape"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                        <Spinner
-                            android:id="@+id/CmbInfTecnicaEscape"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_alignLeft="@+id/TxtInfTecnicaCual"
-                            android:layout_alignTop="@+id/LblInfTecnicaEscape"
-                            android:layout_toLeftOf="@+id/CmbInfTecnicaBypass" />
-
-                        <Spinner
-                            android:id="@+id/CmbInfTecnicaCamaraMedidor"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_alignParentRight="true"
-                            android:layout_alignTop="@+id/LblInfTecnicaCamaraMedidor"
-                            android:layout_toRightOf="@+id/LblInfTecnicaCamaraMedidor" />
-
-                        <TextView
-                            android:id="@+id/LblInfTecnicaEstado"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignRight="@+id/LblInfTecnicaServicioDirecto"
-                            android:layout_below="@+id/LblInfTecnicaCamaraMedidor"
-                            android:gravity="center_vertical"
-                            android:text="@string/LblInfTecnicaEstado"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                        <Spinner
-                            android:id="@+id/CmbInfTecnicaEstado"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_alignTop="@+id/LblInfTecnicaEstado"
-                            android:layout_toRightOf="@+id/LblInfTecnicaEscape" />
-
-                        <TextView
-                            android:id="@+id/LblInfTecnicaNumeroIndividual"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/TxtInfTecnicaNumeroIndividual"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignTop="@+id/TxtInfTecnicaNumeroIndividual"
-                            android:gravity="center_vertical"
-                            android:text="@string/LblInfTecnicaNumero"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                        <TextView
-                            android:id="@+id/LblInfTecnicaLecturaIndividual"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/TxtInfTecnicaLecturaIndividual"
-                            android:layout_alignParentLeft="true"
-                            android:layout_below="@+id/TxtInfTecnicaNumeroIndividual"
-                            android:gravity="center_vertical"
-                            android:text="@string/LblInfTecnicaLecturaIndividual"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                        <EditText
-                            android:id="@+id/TxtInfTecnicaLecturaIndividual"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignRight="@+id/TxtInfTecnicaNumeroIndividual"
-                            android:layout_below="@+id/TxtInfTecnicaNumeroIndividual"
-                            android:layout_toRightOf="@+id/LblInfTecnicaLecturaIndividual"
-                            android:inputType="number" />
-
-                        <Spinner
-                            android:id="@+id/CmbInfTecnicaServicioDirecto"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_below="@+id/CmbInfTecnicaEscape"
-                            android:layout_toLeftOf="@+id/LblInfTecnicaBypass"
-                            android:layout_toRightOf="@+id/LblInfTecnicaServicioDirecto" />
-
-                        <TextView
-                            android:id="@+id/LblInfTecnicaServicioDirecto"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/CmbInfTecnicaServicioDirecto"
-                            android:layout_alignParentLeft="true"
-                            android:layout_below="@+id/LblInfTecnicaEscape"
-                            android:gravity="center_vertical"
-                            android:text="@string/LblInfTecnicaServicioDirecto"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                        <TextView
-                            android:id="@+id/LblInfTecnicaCamaraMedidor"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:layout_alignParentLeft="true"
-                            android:layout_below="@+id/CmbInfTecnicaServicioDirecto"
-                            android:gravity="center_vertical"
-                            android:text="@string/LblInfTecnicaCamaraMedidor"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                        <Spinner
-                            android:id="@+id/CmbInfTecnicaBypass"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_alignTop="@+id/LblInfTecnicaBypass"
-                            android:layout_toRightOf="@+id/LblInfTecnicaBypass" />
-
-                        <EditText
-                            android:id="@+id/TxtInfTecnicaMarcaIndividual"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/TxtInfTecnicaNumeroIndividual"
-                            android:layout_alignLeft="@+id/CmbInfTecnicaDiametroIndividual"
-                            android:layout_alignParentRight="true"
-                            android:ems="10"
-                            android:inputType="text" />
-
-                        <TextView
-                            android:id="@+id/LblInfTecnicaMarcaIndividual"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_above="@+id/TxtInfTecnicaLecturaIndividual"
-                            android:layout_alignTop="@+id/TxtInfTecnicaNumeroIndividual"
-                            android:layout_toRightOf="@+id/TxtInfTecnicaNumeroIndividual"
-                            android:gravity="center_vertical"
-                            android:text="@string/LblInfTecnicaMarca"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                        <TextView
-                            android:id="@+id/LblInfTecnicaDiametroIndividual"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/TxtInfTecnicaLecturaIndividual"
-                            android:layout_alignLeft="@+id/LblInfTecnicaMarcaIndividual"
-                            android:layout_alignTop="@+id/TxtInfTecnicaLecturaIndividual"
-                            android:gravity="center_vertical"
-                            android:text="@string/LblInfTecnicaDiametroIndividual"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                        <Spinner
-                            android:id="@+id/CmbInfTecnicaDiametroIndividual"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_alignTop="@+id/LblInfTecnicaDiametroIndividual"
-                            android:layout_toRightOf="@+id/LblInfTecnicaDiametroIndividual" />
-
-                        <TextView
-                            android:id="@+id/LblInfTecnicaBypass"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_above="@+id/CmbInfTecnicaCamaraMedidor"
-                            android:layout_alignLeft="@+id/LblInfTecnicaMarcaIndividual"
-                            android:layout_below="@+id/CmbInfTecnicaEscape"
-                            android:gravity="center_vertical"
-                            android:text="@string/LblInfTecnicaBypass"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                        <EditText
-                            android:id="@+id/TxtInfTecnicaNumeroIndividual"
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/LblInfTecnicaEstado"
-                            android:layout_marginTop="32dp"
-                            android:layout_toRightOf="@+id/LblInfTecnicaNumeroIndividual"
-                            android:ems="10"
-                            android:inputType="text" />
-
-                        <TextView
-                            android:id="@+id/TituloInfTecnicaIndiviual"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentRight="true"
-                            android:layout_below="@+id/LblInfTecnicaEstado"
-                            android:gravity="center_horizontal"
-                            android:text="@string/TituloInfTecnicaIndividual"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-                        <Button
-                            android:id="@+id/BtnGuardarInfTecnica"
-                            style="?android:attr/buttonStyleSmall"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignLeft="@+id/CmbInfTecnicaBypass"
-                            android:layout_alignParentRight="true"
-                            android:layout_alignTop="@+id/CmbInfTecnicaEscape"
-                            android:text="@string/BtnGuardarInfTecnica" />
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1" >
-
-                        <TextView
-                            android:id="@+id/TituloInfTecnicaTotalizador"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentRight="true"
-                            android:layout_alignParentTop="true"
-                            android:gravity="center_horizontal"
-                            android:text="@string/TituloInfTecnicaTotalizador"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-                        <TextView
-                            android:id="@+id/LblInfTecnicaNumeroTotalizador"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/TxtInfTecnicaMarcaTotalizador"
-                            android:layout_alignParentLeft="true"
-                            android:layout_below="@+id/TituloInfTecnicaTotalizador"
-                            android:gravity="center_vertical"
-                            android:text="@string/LblInfTecnicaNumero"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                        <EditText
-                            android:id="@+id/TxtInfTecnicaNumeroTotalizador"
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:layout_alignTop="@+id/LblInfTecnicaNumeroTotalizador"
-                            android:layout_toRightOf="@+id/LblInfTecnicaNumeroTotalizador"
-                            android:ems="10"
-                            android:inputType="text" />
-
-                        <TextView
-                            android:id="@+id/LblInfTecnicaMarcaTotalizador"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_above="@+id/CmbInfTecnicaDiametroTotalizador"
-                            android:layout_alignTop="@+id/TxtInfTecnicaNumeroTotalizador"
-                            android:layout_toRightOf="@+id/TxtInfTecnicaNumeroTotalizador"
-                            android:gravity="center_vertical"
-                            android:text="@string/LblInfTecnicaMarca"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                        <EditText
-                            android:id="@+id/TxtInfTecnicaMarcaTotalizador"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:layout_below="@+id/TituloInfTecnicaTotalizador"
-                            android:layout_toRightOf="@+id/LblInfTecnicaMarcaTotalizador"
-                            android:ems="10"
-                            android:inputType="text" />
-
-                        <TextView
-                            android:id="@+id/LblInfTecnicaLecturaTotalizador"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/CmbInfTecnicaDiametroTotalizador"
-                            android:layout_alignParentLeft="true"
-                            android:layout_below="@+id/LblInfTecnicaNumeroTotalizador"
-                            android:gravity="center_vertical"
-                            android:text="@string/LblInfTecnicaLecturaIndividual"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                        <TextView
-                            android:id="@+id/LblInfTecnicaDiametroTotalizador"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/TxtInfTecnicaLecturaTotalizador"
-                            android:layout_alignLeft="@+id/LblInfTecnicaMarcaTotalizador"
-                            android:layout_below="@+id/LblInfTecnicaMarcaTotalizador"
-                            android:gravity="center_vertical"
-                            android:text="@string/LblInfTecnicaDiametroIndividual"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                        <Spinner
-                            android:id="@+id/CmbInfTecnicaDiametroTotalizador"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_below="@+id/LblInfTecnicaNumeroTotalizador"
-                            android:layout_toRightOf="@+id/LblInfTecnicaDiametroTotalizador" />
-
-                        <EditText
-                            android:id="@+id/TxtInfTecnicaLecturaTotalizador"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignLeft="@+id/TxtInfTecnicaNumeroTotalizador"
-                            android:layout_alignRight="@+id/TxtInfTecnicaNumeroTotalizador"
-                            android:layout_below="@+id/LblInfTecnicaNumeroTotalizador"
-                            android:ems="10"
-                            android:inputType="number" />
-
-                        <TextView
-                            android:id="@+id/TituloInfTecnicaDiagnostico"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentRight="true"
-                            android:layout_below="@+id/LblInfTecnicaLecturaTotalizador"
-                            android:layout_marginTop="10dp"
-                            android:gravity="center_horizontal"
-                            android:text="@string/TituloInfTecnicaDiagnostico"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-                        <Spinner
-                            android:id="@+id/CmbInfTecnicaSegundoConcepto"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_alignRight="@+id/LblInfTecnicaMarcaTotalizador"
-                            android:layout_alignTop="@+id/LblInfTecnicaSegundoConcepto"
-                            android:layout_toRightOf="@+id/LblInfTecnicaSegundoConcepto" />
-
-                        <Button
-                            android:id="@+id/BtnInfTecnicaObservacion"
-                            style="?android:attr/buttonStyleSmall"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/CmbInfTecnicaSegundoConcepto"
-                            android:layout_alignParentRight="true"
-                            android:layout_toRightOf="@+id/LblInfTecnicaMarcaTotalizador"
-                            android:text="@string/BtnInfTecnicaObservacion" />
-
-                        <TextView
-                            android:id="@+id/LblInfTecnicaSegundoConcepto"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:layout_alignParentLeft="true"
-                            android:layout_below="@+id/TituloInfTecnicaDiagnostico"
-                            android:layout_marginTop="10dp"
-                            android:gravity="center_vertical"
-                            android:text="@string/LblInfTecnicaSegundoConcepto"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                        <TextView
-                            android:id="@+id/LblInfTecnicaRespuesta"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:layout_alignParentLeft="true"
-                            android:layout_below="@+id/LblInfTecnicaSegundoConcepto"
-                            android:gravity="center_vertical"
-                            android:text="@string/LblInfTecnicaRespuesta"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                        <Spinner
-                            android:id="@+id/CmbInfTecnicaRespuesta"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_alignTop="@+id/LblInfTecnicaRespuesta"
-                            android:layout_toRightOf="@+id/LblInfTecnicaRespuesta" />
-
-                        <TextView
-                            android:id="@+id/LblInfTecnicaObservacion"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentRight="true"
-                            android:layout_below="@+id/LblInfTecnicaRespuesta"
-                            android:text="@string/LblInfTecnicaObservacion"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                        <EditText
-                            android:id="@+id/TxtInfTecnicaObservacion"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentRight="true"
-                            android:layout_below="@+id/LblInfTecnicaObservacion"
-                            android:ems="10"
-                            android:inputType="textMultiLine" />
                     </RelativeLayout>
                 </LinearLayout>  
             </FrameLayout>
