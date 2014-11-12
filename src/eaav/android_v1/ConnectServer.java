@@ -372,7 +372,7 @@ public class ConnectServer {
     		Toast.makeText(this.CtxTrabajoProgramado,"Conectando con el servidor.", Toast.LENGTH_SHORT).show();
     		_servidor = DownLoadTrabajoSQL.SelectShieldWhere("db_parametros", "valor", "item='servidor'");
 			_puerto = DownLoadTrabajoSQL.SelectShieldWhere("db_parametros", "valor", "item='puerto'");
-			_pagina = DownLoadTrabajoSQL.SelectShieldWhere("db_parametros", "valor", "item='servicio'");
+			_pagina = DownLoadTrabajoSQL.SelectShieldWhere("db_parametros", "valor", "item='servicio'")+"/ServerToPDA.php";
 			_pda = DownLoadTrabajoSQL.SelectShieldWhere("db_parametros", "valor", "item='pda'");
     	}
     	
